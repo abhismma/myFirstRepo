@@ -15,5 +15,15 @@ let sentenceBuilder = {
             : "Invalid property";
     }
 };
+// eg
+console.log(sentenceBuilder.buildSentence()); // Output: "I am coding"
+
+sentenceBuilder.updateProperty("verb", "am learning");
+console.log(sentenceBuilder.buildSentence()); // Output: "I am learning coding"
+
+sentenceBuilder.updateProperty("subject", "The cat");
+console.log(sentenceBuilder.buildSentence()); // Output: "The cat is learning coding"
+
+console.log(sentenceBuilder.updateProperty("mood", "happy")); // Output: "Invalid property"
 
 
