@@ -14,7 +14,7 @@ let detail = [];
 detail.push(aliceDetail,bobDetail)
 console.log(detail)
 
-//output: 
+//output: ['Alice lives in New York on Broadway ','Bob lives in Los Angeles on Sunset Boulevard']
 
 
 
