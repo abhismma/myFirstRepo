@@ -1,17 +1,19 @@
 function reorderCosts(products) {
+   
+    const lowStockProducts = products.filter(p => p.stock < 100);
+
+    const reorderData = lowStockProducts.map(p => ({
+        category: p.category,
+        cost: p.pricePerUnit * (100 - p.stock)
+    }));
+
+    const categoryCosts = reorderData.reduce((acc, { category, cost }) => {
+        acc[category] = (acc[category] || 0) + cost;
+        return acc;
+    }, {});
+
     return Object.fromEntries(
-        products
-            .filter(p => p.stock < 100)
-            .map(p => ({
-                category: p.category,
-                cost: p.pricePerUnit * (100 - p.stock)
-            }))
-            .reduce((acc, { category, cost }) => {
-                acc[category] = (acc[category] || 0) + cost;
-                return acc;
-            }, {})
-            |> Object.entries(#)
-            |> #.sort((a, b) => b[1] - a[1])
+        Object.entries(categoryCosts).sort((a, b) => b[1] - a[1])
     );
 }
 
