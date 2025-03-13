@@ -35,11 +35,11 @@
 function createFunctionRegistry(){
     let registry = {};
     return {
-        registerFunction : function(name,fn){
-            if(typeOf fn !=="function"){
+        registerFunction : function(name,any){
+            if(typeOf any !=="function";{
                 throw new Error("Only function can be registerd");
             };
-            registry[name]=fn;
+            registry[name]=any;
         },
         executeFunction : function(name, ...args){
             if(!registry[name]) {
@@ -59,5 +59,18 @@ functionRegistry.registerFunction("Greet", name => `Hello. ${name}!`);
 functionRegistry.registerFunction("add", (a,b)=> a+b);
 functionRegistry.registerFunction("multiply",(a,b)=>a*b);
 
+//listing Registerd FUnction
+
 console.log("Registered Function", functionRegistry.listFunctions());
 
+// Executing Function 
+
+console.log("Greeting :",functionRegistry.executeFunction( "Abhimanyu"));
+console.log("Addition: ",functionRegistry.executeFunction("add", 2, 3));
+console.log("Multiplication: ",functionRegistry.executeFunction("multiply", 2, 3));
+
+try{
+    functionRegistry.executeFunction("divide",10,5);
+} catch (error){
+ console.log(error.message);
+}
