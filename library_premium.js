@@ -50,3 +50,36 @@ PremiumMember.prototype.borrowBook = function(book) {
 
 // Export constructors for modularity
 export { Book, Member, PremiumMember };
+
+import { Book, Member, PremiumMember } from "./library.js";
+
+// Creating Books
+const book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald");
+const book2 = new Book("To Kill a Mockingbird", "Harper Lee");
+const book3 = new Book("1984", "George Orwell");
+const book4 = new Book("The Catcher in the Rye", "J.D. Salinger");
+const book5 = new Book("Moby-Dick", "Herman Melville");
+const book6 = new Book("The Hobbit", "J.R.R. Tolkien");
+
+// Creating Members
+const alice = new Member("Alice");
+const bob = new PremiumMember("Bob");
+
+// Regular Member Borrowing Books
+alice.borrowBook(book1); // Alice borrowed "The Great Gatsby".
+alice.borrowBook(book2); // Alice borrowed "To Kill a Mockingbird".
+alice.borrowBook(book3); // Alice borrowed "1984".
+alice.borrowBook(book4); // Alice cannot borrow more than 3 books.
+
+// Premium Member Borrowing Books
+bob.borrowBook(book4); // Bob borrowed "The Catcher in the Rye".
+bob.borrowBook(book5); // Bob borrowed "Moby-Dick".
+bob.borrowBook(book6); // Bob borrowed "The Hobbit".
+bob.borrowBook(book1); // "The Great Gatsby" is already borrowed.
+bob.borrowBook(book2); // Bob borrowed "To Kill a Mockingbird".
+bob.borrowBook(book3); // Bob borrowed "1984".
+bob.borrowBook(book4); // Bob cannot borrow more than 5 books.
+
+// Using Bind to Create a Pre-Bound Borrow Function
+const borrowForAlice = alice.borrowBook.bind(alice, book5);
+borrowForAlice(); // Alice cannot borrow more than 3 books.
