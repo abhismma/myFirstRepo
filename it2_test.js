@@ -61,3 +61,5 @@ async function fetchProducts() {
     }
 }
 fetchProducts();
+calculateDiscountedTotal(fetchProducts())
+sortProductsByTitle()
