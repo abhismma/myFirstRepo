@@ -1,0 +1,138 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Learn how the Internet works with a simple, interactive explanation of clients, servers, UI, HTML, CSS, and more!">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How the Internet Works</title>
+ 
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #ece9e6, #ffffff);
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #004d99;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    section, article, aside {
+      padding: 1em;
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 5px;
+    }
+    form {
+      background-color: #f0f8ff;
+      padding: 1em;
+      margin-top: 1em;
+    }
+    input[type="submit"]:hover {
+      background-color: #004d99;
+      color: white;
+    }
+    .icon::before {
+      content: "\1F4BB "; /* Laptop icon */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>How the Internet Works</h1>
+    <nav>
+      <ul>
+        <li><a href="#client-server">Client & Server</a></li>
+        <li><a href="#web-request">Web Request</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>  <section id="client-server">
+    <h2>Client & Server Communication</h2>
+    <p>The <b>client</b> is your browser or app, and the <i>server</i> is a computer that responds with data. When you type a URL and hit Enter, a <u>request</u> is sent to a server.</p>
+    <hr>
+  </section>  <article id="web-request">
+    <h3>The Journey of a Web Request</h3>
+    <ol>
+      <li>User enters a URL in the browser.</li>
+      <li>Browser sends a DNS request to find server IP.</li>
+      <li>HTTP request is sent to the server.</li>
+      <li>Server processes the request.</li>
+      <li>Response is sent back and rendered on the browser.</li>
+    </ol><ul>
+  <li>HTTP</li>
+  <li>DNS</li>
+  <li>TCP/IP</li>
+  <li>HTML</li>
+  <li>CSS</li>
+</ul>
+
+<table>
+  <caption>Client vs Server</caption>
+  <tr>
+    <th>Function</th><th>Client</th><th>Server</th>
+  </tr>
+  <tr>
+    <td>Initiates Requests</td><td>Yes</td><td>No</td>
+  </tr>
+  <tr>
+    <td>Processes Data</td><td>Sometimes</td><td>Yes</td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <caption>Static vs Dynamic Websites</caption>
+  <tr>
+    <th>Feature</th><th>Static</th><th>Dynamic</th>
+  </tr>
+  <tr>
+    <td>Content</td><td>Fixed</td><td>Changes with user</td>
+  </tr>
+  <tr>
+    <td>Languages</td><td>HTML/CSS</td><td>JS/PHP etc.</td>
+  </tr>
+</table>
+
+<hr>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Dxcc6ycZ73M" frameborder="0" allowfullscreen></iframe>
+<br><br>
+<iframe src="https://www.google.com/maps/embed?..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+  </article>  <aside>
+    <h4>Quick Tips</h4>
+    <p><b>HTML</b> stands for HyperText Markup Language.</p>
+   
+  </aside>  <section id="quiz">
+    <h3>Quick Quiz</h3>
+    <form>
+      <p>1. What is a client?</p>
+      <input type="radio" name="q1" value="a"> A server<br>
+      <input type="radio" name="q1" value="b"> A browser sending requests<br>
+      <input type="radio" name="q1" value="c"> A router<br><p>Your Feedback:</p>
+  <input type="text" name="feedback" placeholder="Type here...">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+  </section>  <footer>
+    <p>Created by Abhimanyu </p>
+  </footer>
+</body>
+</html>
